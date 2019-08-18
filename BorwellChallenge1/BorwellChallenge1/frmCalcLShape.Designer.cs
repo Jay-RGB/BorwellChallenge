@@ -42,6 +42,7 @@
             this.txtLengthB = new System.Windows.Forms.TextBox();
             this.txtLengthA = new System.Windows.Forms.TextBox();
             this.lblInstructions = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgExample)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             this.txtLengthD.Name = "txtLengthD";
             this.txtLengthD.Size = new System.Drawing.Size(192, 22);
             this.txtLengthD.TabIndex = 26;
+            this.txtLengthD.TextChanged += new System.EventHandler(this.TxtLengthD_TextChanged);
             // 
             // lblLengthC
             // 
@@ -80,6 +82,7 @@
             this.txtLengthC.Name = "txtLengthC";
             this.txtLengthC.Size = new System.Drawing.Size(192, 22);
             this.txtLengthC.TabIndex = 24;
+            this.txtLengthC.TextChanged += new System.EventHandler(this.TxtLengthC_TextChanged);
             // 
             // imgExample
             // 
@@ -139,6 +142,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(192, 22);
             this.txtHeight.TabIndex = 17;
+            this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
             // 
             // txtLengthB
             // 
@@ -147,6 +151,7 @@
             this.txtLengthB.Name = "txtLengthB";
             this.txtLengthB.Size = new System.Drawing.Size(192, 22);
             this.txtLengthB.TabIndex = 16;
+            this.txtLengthB.TextChanged += new System.EventHandler(this.TxtLengthB_TextChanged);
             // 
             // txtLengthA
             // 
@@ -155,6 +160,7 @@
             this.txtLengthA.Name = "txtLengthA";
             this.txtLengthA.Size = new System.Drawing.Size(192, 22);
             this.txtLengthA.TabIndex = 15;
+            this.txtLengthA.TextChanged += new System.EventHandler(this.TxtLengthA_TextChanged);
             // 
             // lblInstructions
             // 
@@ -166,11 +172,22 @@
             this.lblInstructions.TabIndex = 14;
             this.lblInstructions.Text = "Please input the room dimensions below:";
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarning.Location = new System.Drawing.Point(81, 84);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(323, 20);
+            this.lblWarning.TabIndex = 28;
+            this.lblWarning.Text = "(Dimensions should be entered in metres)";
+            // 
             // frmCalcLShape
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.lblLengthD);
             this.Controls.Add(this.txtLengthD);
             this.Controls.Add(this.lblLengthC);
@@ -187,6 +204,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCalcLShape";
             this.Text = "Borwell Challenge - Paint Calculator";
+            this.Load += new System.EventHandler(this.FrmCalcLShape_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgExample)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,5 +226,6 @@
         internal System.Windows.Forms.TextBox txtLengthB;
         internal System.Windows.Forms.TextBox txtLengthA;
         internal System.Windows.Forms.Label lblInstructions;
+        internal System.Windows.Forms.Label lblWarning;
     }
 }

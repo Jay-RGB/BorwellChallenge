@@ -36,6 +36,7 @@
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.txtLengthA = new System.Windows.Forms.TextBox();
             this.lblInstructions = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgExample)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +88,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(192, 22);
             this.txtHeight.TabIndex = 12;
+            this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
             // 
             // txtLengthA
             // 
@@ -95,6 +97,7 @@
             this.txtLengthA.Name = "txtLengthA";
             this.txtLengthA.Size = new System.Drawing.Size(192, 22);
             this.txtLengthA.TabIndex = 11;
+            this.txtLengthA.TextChanged += new System.EventHandler(this.TxtLengthA_TextChanged);
             // 
             // lblInstructions
             // 
@@ -106,11 +109,22 @@
             this.lblInstructions.TabIndex = 10;
             this.lblInstructions.Text = "Please input the room dimensions below:";
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarning.Location = new System.Drawing.Point(83, 85);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(323, 20);
+            this.lblWarning.TabIndex = 21;
+            this.lblWarning.Text = "(Dimensions should be entered in metres)";
+            // 
             // frmCalcCircular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.imgExample);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblHeight);
@@ -136,5 +150,6 @@
         internal System.Windows.Forms.TextBox txtHeight;
         internal System.Windows.Forms.TextBox txtLengthA;
         internal System.Windows.Forms.Label lblInstructions;
+        internal System.Windows.Forms.Label lblWarning;
     }
 }

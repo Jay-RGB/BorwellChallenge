@@ -12,9 +12,14 @@ namespace BorwellChallenge1
 {
     public partial class frmCalcVoidSpaces : Form
     {
+        private decimal voidSpaceArea;
+        private decimal sqrLengthB;
+        private decimal sqrHeight;
+
         public frmCalcVoidSpaces()
         {
             InitializeComponent();
+
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
@@ -22,6 +27,11 @@ namespace BorwellChallenge1
             frmResults form4 = new frmResults();
             form4.Visible = true;
             this.Hide();
+        }
+
+        private void FrmCalcVoidSpaces_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

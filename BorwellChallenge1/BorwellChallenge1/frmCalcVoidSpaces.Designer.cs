@@ -44,10 +44,11 @@
             this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.Location = new System.Drawing.Point(116, 85);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(421, 60);
+            this.lblInstructions.Size = new System.Drawing.Size(436, 60);
             this.lblInstructions.TabIndex = 19;
-            this.lblInstructions.Text = "Enter the Height and Width of one of the door/windows \r\nand then click \"Submit\" t" +
-    "o save the dimensions. \r\nRepeat for each Door/Window and then click Next.";
+            this.lblInstructions.Text = "Enter the Height and Width in metres of one of the door/\r\nwindows and then click " +
+    "\"Submit\" to save the dimensions. \r\nRepeat for each Door/Window and then click Ne" +
+    "xt.";
             // 
             // btnSubmit
             // 
@@ -127,6 +128,7 @@
             this.Controls.Add(this.lblInstructionsHeader);
             this.Name = "frmCalcVoidSpaces";
             this.Text = "Borwell Challenge - Paint Calculator";
+            this.Load += new System.EventHandler(this.FrmCalcVoidSpaces_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
