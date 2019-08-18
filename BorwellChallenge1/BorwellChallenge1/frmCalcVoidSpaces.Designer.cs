@@ -30,7 +30,6 @@
         {
             this.lblInstructions = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblWidth = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
@@ -59,15 +58,6 @@
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(492, 366);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(111, 35);
-            this.btnBack.TabIndex = 17;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(609, 366);
@@ -76,6 +66,7 @@
             this.btnNext.TabIndex = 16;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // lblWidth
             // 
@@ -128,7 +119,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblWidth);
             this.Controls.Add(this.lblHeight);
@@ -146,7 +136,6 @@
 
         internal System.Windows.Forms.Label lblInstructions;
         internal System.Windows.Forms.Button btnSubmit;
-        internal System.Windows.Forms.Button btnBack;
         internal System.Windows.Forms.Button btnNext;
         internal System.Windows.Forms.Label lblWidth;
         internal System.Windows.Forms.Label lblHeight;

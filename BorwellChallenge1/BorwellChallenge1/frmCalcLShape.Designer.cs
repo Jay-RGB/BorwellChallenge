@@ -34,7 +34,6 @@
             this.lblLengthC = new System.Windows.Forms.Label();
             this.txtLengthC = new System.Windows.Forms.TextBox();
             this.imgExample = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblHeight = new System.Windows.Forms.Label();
             this.lblLengthB = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             // 
             this.lblLengthD.AutoSize = true;
             this.lblLengthD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLengthD.Location = new System.Drawing.Point(82, 206);
+            this.lblLengthD.Location = new System.Drawing.Point(83, 206);
             this.lblLengthD.Name = "lblLengthD";
             this.lblLengthD.Size = new System.Drawing.Size(78, 20);
             this.lblLengthD.TabIndex = 27;
@@ -59,6 +58,7 @@
             // txtLengthD
             // 
             this.txtLengthD.Location = new System.Drawing.Point(221, 203);
+            this.txtLengthD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLengthD.Name = "txtLengthD";
             this.txtLengthD.Size = new System.Drawing.Size(192, 22);
             this.txtLengthD.TabIndex = 26;
@@ -67,7 +67,7 @@
             // 
             this.lblLengthC.AutoSize = true;
             this.lblLengthC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLengthC.Location = new System.Drawing.Point(82, 178);
+            this.lblLengthC.Location = new System.Drawing.Point(83, 178);
             this.lblLengthC.Name = "lblLengthC";
             this.lblLengthC.Size = new System.Drawing.Size(77, 20);
             this.lblLengthC.TabIndex = 25;
@@ -76,6 +76,7 @@
             // txtLengthC
             // 
             this.txtLengthC.Location = new System.Drawing.Point(221, 175);
+            this.txtLengthC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLengthC.Name = "txtLengthC";
             this.txtLengthC.Size = new System.Drawing.Size(192, 22);
             this.txtLengthC.TabIndex = 24;
@@ -84,34 +85,28 @@
             // 
             this.imgExample.Image = ((System.Drawing.Image)(resources.GetObject("imgExample.Image")));
             this.imgExample.Location = new System.Drawing.Point(492, 119);
+            this.imgExample.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgExample.Name = "imgExample";
-            this.imgExample.Size = new System.Drawing.Size(200, 120);
+            this.imgExample.Size = new System.Drawing.Size(267, 148);
             this.imgExample.TabIndex = 23;
             this.imgExample.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(492, 366);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(111, 35);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(609, 366);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(111, 35);
+            this.btnNext.Size = new System.Drawing.Size(111, 34);
             this.btnNext.TabIndex = 21;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // lblHeight
             // 
             this.lblHeight.AutoSize = true;
             this.lblHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeight.Location = new System.Drawing.Point(82, 234);
+            this.lblHeight.Location = new System.Drawing.Point(83, 234);
             this.lblHeight.Name = "lblHeight";
             this.lblHeight.Size = new System.Drawing.Size(58, 20);
             this.lblHeight.TabIndex = 20;
@@ -121,7 +116,7 @@
             // 
             this.lblLengthB.AutoSize = true;
             this.lblLengthB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLengthB.Location = new System.Drawing.Point(82, 150);
+            this.lblLengthB.Location = new System.Drawing.Point(83, 150);
             this.lblLengthB.Name = "lblLengthB";
             this.lblLengthB.Size = new System.Drawing.Size(77, 20);
             this.lblLengthB.TabIndex = 19;
@@ -131,7 +126,7 @@
             // 
             this.lblLengthA.AutoSize = true;
             this.lblLengthA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLengthA.Location = new System.Drawing.Point(82, 122);
+            this.lblLengthA.Location = new System.Drawing.Point(83, 122);
             this.lblLengthA.Name = "lblLengthA";
             this.lblLengthA.Size = new System.Drawing.Size(76, 20);
             this.lblLengthA.TabIndex = 18;
@@ -140,13 +135,15 @@
             // txtHeight
             // 
             this.txtHeight.Location = new System.Drawing.Point(221, 231);
+            this.txtHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(192, 22);
             this.txtHeight.TabIndex = 17;
             // 
             // txtLengthB
             // 
-            this.txtLengthB.Location = new System.Drawing.Point(221, 147);
+            this.txtLengthB.Location = new System.Drawing.Point(221, 146);
+            this.txtLengthB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLengthB.Name = "txtLengthB";
             this.txtLengthB.Size = new System.Drawing.Size(192, 22);
             this.txtLengthB.TabIndex = 16;
@@ -154,6 +151,7 @@
             // txtLengthA
             // 
             this.txtLengthA.Location = new System.Drawing.Point(221, 119);
+            this.txtLengthA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLengthA.Name = "txtLengthA";
             this.txtLengthA.Size = new System.Drawing.Size(192, 22);
             this.txtLengthA.TabIndex = 15;
@@ -178,7 +176,6 @@
             this.Controls.Add(this.lblLengthC);
             this.Controls.Add(this.txtLengthC);
             this.Controls.Add(this.imgExample);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblHeight);
             this.Controls.Add(this.lblLengthB);
@@ -187,6 +184,7 @@
             this.Controls.Add(this.txtLengthB);
             this.Controls.Add(this.txtLengthA);
             this.Controls.Add(this.lblInstructions);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCalcLShape";
             this.Text = "Borwell Challenge - Paint Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.imgExample)).EndInit();
@@ -202,7 +200,6 @@
         internal System.Windows.Forms.Label lblLengthC;
         internal System.Windows.Forms.TextBox txtLengthC;
         internal System.Windows.Forms.PictureBox imgExample;
-        internal System.Windows.Forms.Button btnBack;
         internal System.Windows.Forms.Button btnNext;
         internal System.Windows.Forms.Label lblHeight;
         internal System.Windows.Forms.Label lblLengthB;

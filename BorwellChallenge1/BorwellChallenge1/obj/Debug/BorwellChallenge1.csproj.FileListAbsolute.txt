@@ -1,0 +1,15 @@
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\bin\Debug\BorwellChallenge1.exe.config
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\bin\Debug\BorwellChallenge1.exe
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\bin\Debug\BorwellChallenge1.pdb
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.csprojAssemblyReference.cache
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmCalcLShape.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmCalcCircular.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmCalcSquare.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmCalcVoidSpaces.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmResults.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.frmStartup.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.Properties.Resources.resources
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.csproj.GenerateResource.cache
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.csproj.CoreCompileInputs.cache
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.exe
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.pdb
