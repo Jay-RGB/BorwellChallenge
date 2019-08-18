@@ -16,5 +16,12 @@ namespace BorwellChallenge1
         {
             InitializeComponent();
         }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            frmCalcVoidSpaces form3 = new frmCalcVoidSpaces();
+            form3.Visible = true;
+            this.Hide();
+        }
     }
 }

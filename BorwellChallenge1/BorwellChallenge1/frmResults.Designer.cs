@@ -34,8 +34,7 @@
             this.lblAreaResult = new System.Windows.Forms.Label();
             this.lblWallPaint = new System.Windows.Forms.Label();
             this.lblRoomVolume = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnRestart = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.lblWallPaintWastage = new System.Windows.Forms.Label();
             this.lblFloorArea = new System.Windows.Forms.Label();
             this.lblResultsHeader = new System.Windows.Forms.Label();
@@ -45,7 +44,7 @@
             // 
             this.lblPaintWastageResult.AutoSize = true;
             this.lblPaintWastageResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaintWastageResult.Location = new System.Drawing.Point(499, 202);
+            this.lblPaintWastageResult.Location = new System.Drawing.Point(567, 203);
             this.lblPaintWastageResult.Name = "lblPaintWastageResult";
             this.lblPaintWastageResult.Size = new System.Drawing.Size(0, 20);
             this.lblPaintWastageResult.TabIndex = 25;
@@ -54,7 +53,7 @@
             // 
             this.lblPaintResult.AutoSize = true;
             this.lblPaintResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaintResult.Location = new System.Drawing.Point(530, 152);
+            this.lblPaintResult.Location = new System.Drawing.Point(599, 154);
             this.lblPaintResult.Name = "lblPaintResult";
             this.lblPaintResult.Size = new System.Drawing.Size(0, 20);
             this.lblPaintResult.TabIndex = 24;
@@ -63,7 +62,7 @@
             // 
             this.lblVolumeResult.AutoSize = true;
             this.lblVolumeResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVolumeResult.Location = new System.Drawing.Point(391, 123);
+            this.lblVolumeResult.Location = new System.Drawing.Point(459, 124);
             this.lblVolumeResult.Name = "lblVolumeResult";
             this.lblVolumeResult.Size = new System.Drawing.Size(0, 20);
             this.lblVolumeResult.TabIndex = 23;
@@ -72,7 +71,7 @@
             // 
             this.lblAreaResult.AutoSize = true;
             this.lblAreaResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaResult.Location = new System.Drawing.Point(362, 94);
+            this.lblAreaResult.Location = new System.Drawing.Point(431, 95);
             this.lblAreaResult.Name = "lblAreaResult";
             this.lblAreaResult.Size = new System.Drawing.Size(0, 20);
             this.lblAreaResult.TabIndex = 22;
@@ -81,7 +80,7 @@
             // 
             this.lblWallPaint.AutoSize = true;
             this.lblWallPaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWallPaint.Location = new System.Drawing.Point(116, 152);
+            this.lblWallPaint.Location = new System.Drawing.Point(116, 153);
             this.lblWallPaint.Name = "lblWallPaint";
             this.lblWallPaint.Size = new System.Drawing.Size(381, 20);
             this.lblWallPaint.TabIndex = 21;
@@ -97,23 +96,16 @@
             this.lblRoomVolume.TabIndex = 20;
             this.lblRoomVolume.Text = "The Volume of the Room is:";
             // 
-            // btnBack
+            // btnExit
             // 
-            this.btnBack.Location = new System.Drawing.Point(492, 366);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(111, 35);
-            this.btnBack.TabIndex = 19;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnRestart
-            // 
-            this.btnRestart.Location = new System.Drawing.Point(609, 366);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(111, 35);
-            this.btnRestart.TabIndex = 18;
-            this.btnRestart.Text = "Restart";
-            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(609, 366);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(111, 34);
+            this.btnExit.TabIndex = 18;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // lblWallPaintWastage
             // 
@@ -157,11 +149,11 @@
             this.Controls.Add(this.lblAreaResult);
             this.Controls.Add(this.lblWallPaint);
             this.Controls.Add(this.lblRoomVolume);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnRestart);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblWallPaintWastage);
             this.Controls.Add(this.lblFloorArea);
             this.Controls.Add(this.lblResultsHeader);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmResults";
             this.Text = "Borwell Challenge - Paint Calculator";
             this.ResumeLayout(false);
@@ -177,8 +169,7 @@
         internal System.Windows.Forms.Label lblAreaResult;
         internal System.Windows.Forms.Label lblWallPaint;
         internal System.Windows.Forms.Label lblRoomVolume;
-        internal System.Windows.Forms.Button btnBack;
-        internal System.Windows.Forms.Button btnRestart;
+        internal System.Windows.Forms.Button btnExit;
         internal System.Windows.Forms.Label lblWallPaintWastage;
         internal System.Windows.Forms.Label lblFloorArea;
         internal System.Windows.Forms.Label lblResultsHeader;

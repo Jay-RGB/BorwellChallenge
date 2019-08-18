@@ -43,6 +43,7 @@
             this.btnNext.TabIndex = 9;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // rdbtnCircular
             // 
