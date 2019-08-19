@@ -8,103 +8,85 @@ namespace BorwellChallenge1
 {
     class RoomDimensions
     {
-        private decimal lengthA;
-        private decimal lengthB;
-        private decimal lengthC;
-        private decimal lengthD;
-        private decimal height;
-        private decimal diameter;
-        private decimal voidSpaceHeight;
-        private decimal voidSpaceWidth;
-        private decimal floorArea;
-        private decimal roomVolume;
-        private decimal paintRequired;
+        static decimal lengthA;
+        static decimal lengthB;
+        static decimal lengthC;
+        static decimal lengthD;
+        static decimal height;
+        static decimal diameter;
+        static decimal floorArea;
+        static decimal roomVolume;
+        static decimal paintRequired;
 
-        public decimal getLengthA()
+        public static decimal getLengthA()
         {
             return lengthA;
         }
-        public void setLengthA(decimal input)
+        public static void setLengthA(decimal input)
         {
             lengthA = input;
         }
-        public decimal getLengthB()
+        public static decimal getLengthB()
         {
             return lengthB;
         }
-        public void setLengthB(decimal input)
+        public static void setLengthB(decimal input)
         {
             lengthB = input;
         }
-        public decimal getLengthC()
+        public static decimal getLengthC()
         {
             return lengthC;
         }
-        public void setLengthC(decimal input)
+        public static void setLengthC(decimal input)
         {
             lengthC = input;
         }
-        public decimal getLengthD()
+        public static decimal getLengthD()
         {
             return lengthD;
         }
-        public void setLengthD(decimal input)
+        public static void setLengthD(decimal input)
         {
             lengthD = input;
         }
-        public decimal getHeight()
+        public static decimal getHeight()
         {
             return height;
         }
-        public void setHeight(decimal input)
+        public static void setHeight(decimal input)
         {
             height = input;
         }
-        public decimal getDiameter()
+        public static decimal getDiameter()
         {
             return diameter;
         }
-        public void setDiameter(decimal input)
+        public static void setDiameter(decimal input)
         {
             diameter = input;
         }
-        public decimal getVoidSpaceHeight()
-        {
-            return voidSpaceHeight;
-        }
-        public void setVoidSpaceHeight(decimal input)
-        {
-            voidSpaceHeight = input;
-        }
-        public decimal getVoidSpaceWidth()
-        {
-            return voidSpaceWidth;
-        }
-        public void setVoidSpaceWidth(decimal input)
-        {
-            voidSpaceWidth = input;
-        }
-        public decimal getFloorArea()
+        public static decimal getFloorArea()
         {
             return floorArea;
         }
-        public void setFloorArea(decimal input)
+        public static void setFloorArea(decimal input)
         {
             floorArea = input;
         }
-        public decimal getRoomVolume()
+        public static decimal getRoomVolume()
         {
             return roomVolume;
         }
-        public void setRoomVolume(decimal input)
+        public static void setRoomVolume(decimal input)
         {
             roomVolume = input;
         }
-        public decimal getPaintRequired()
+        public static decimal getPaintRequired()
         {
             return paintRequired;
         }
-        public void setPaintRequired(decimal input)
+        public static void setPaintRequired(decimal input)
         {
             paintRequired = input;
         }

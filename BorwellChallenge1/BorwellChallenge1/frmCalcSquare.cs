@@ -66,12 +66,25 @@ namespace BorwellChallenge1
             }
         }
 
+        private bool validateDetails()
+        {
+            if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtLengthB.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)))
+            {
+                MessageBox.Show("Some Fields are blank, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            RoomDimensions newDimensions = new RoomDimensions();
-            newDimensions.setLengthA(sqrLengthA);
-            newDimensions.setLengthB(sqrLengthB);
-            newDimensions.setHeight(sqrHeight);
+            if (!validateDetails()) { return; }
+            RoomDimensions.setLengthA(sqrLengthA);
+            RoomDimensions.setLengthB(sqrLengthB);
+            RoomDimensions.setHeight(sqrHeight);
             frmCalcVoidSpaces form3 = new frmCalcVoidSpaces();
             form3.Visible = true;
             this.Hide();

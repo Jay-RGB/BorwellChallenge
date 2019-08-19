@@ -58,6 +58,7 @@
             this.btnSubmit.TabIndex = 18;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // btnNext
             // 
@@ -95,6 +96,7 @@
             this.txtWidth.Name = "txtWidth";
             this.txtWidth.Size = new System.Drawing.Size(192, 22);
             this.txtWidth.TabIndex = 13;
+            this.txtWidth.TextChanged += new System.EventHandler(this.TxtWidth_TextChanged);
             // 
             // txtHeight
             // 
@@ -102,6 +104,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(192, 22);
             this.txtHeight.TabIndex = 12;
+            this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
             // 
             // lblInstructionsHeader
             // 
