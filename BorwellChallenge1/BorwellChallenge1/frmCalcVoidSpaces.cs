@@ -35,8 +35,8 @@ namespace BorwellChallenge1
 
         private void TxtHeight_TextChanged(object sender, EventArgs e)
         {
-            decimal newVoidHeight = voidHeight;
-
+            decimal newVoidHeight = voidHeight;                         //Prevents users from inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtHeight.Text, out newVoidHeight) == true)
             {
                 voidHeight = newVoidHeight;
@@ -61,7 +61,7 @@ namespace BorwellChallenge1
             }
         }
 
-        private bool validateDetails()
+        private bool validateDetails()              //Checks that all fields are populated and displays and error message if they aren't
         {
             if ((string.IsNullOrWhiteSpace(txtHeight.Text)) || (string.IsNullOrWhiteSpace(txtWidth.Text)))
             {
@@ -86,8 +86,8 @@ namespace BorwellChallenge1
             txtWidth.Text = "0";
         }
 
-        private void BtnNext_Click(object sender, EventArgs e)
-        {
+        private void BtnNext_Click(object sender, EventArgs e) //All the calculations for area, volume and surface area are found below.
+        {                                                      //These final values are stored in the variables in the RoomDimensions Class file.
             if ((RoomDimensions.getLengthA()) > 0)
             {
                 floorArea = (RoomDimensions.getLengthA() * RoomDimensions.getLengthB()) - (RoomDimensions.getLengthC() * RoomDimensions.getLengthD());

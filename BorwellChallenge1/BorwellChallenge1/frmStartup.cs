@@ -20,10 +20,10 @@ namespace BorwellChallenge1
         {
 
         }
-        private void BtnNext_Click(object sender, EventArgs e)
+        private void BtnNext_Click(object sender, EventArgs e) 
         {
-            if (rdbtnSquareRectangle.Checked == true)
-            {
+            if (rdbtnSquareRectangle.Checked == true)           //Checks which radio button is selected when the Next button is clicked and sends
+            {                                                   //User to the relevant calculation form
                 frmCalcSquare form2 = new frmCalcSquare();
                 form2.Visible = true;
                 this.Hide();

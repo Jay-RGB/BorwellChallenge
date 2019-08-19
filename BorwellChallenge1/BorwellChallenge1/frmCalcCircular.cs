@@ -21,8 +21,8 @@ namespace BorwellChallenge1
 
         private void TxtLengthA_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthA = crclLengthA;
-
+            decimal newLengthA = crclLengthA;                           //Prevents users from inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthA.Text, out newLengthA) == true)
             {
                 crclLengthA = newLengthA;
@@ -47,7 +47,7 @@ namespace BorwellChallenge1
             }
         }
 
-        private bool validateDetails()
+        private bool validateDetails()             //Checks that all fields are populated and displays and error message if they aren't
         {
             if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)))
             {
@@ -60,8 +60,8 @@ namespace BorwellChallenge1
             }
         }
 
-        private void BtnNext_Click(object sender, EventArgs e)
-        {
+        private void BtnNext_Click(object sender, EventArgs e)       // When Next button is clicked values are saved to the variables in the
+        {                                                            // RoomDimensions Class file and the Void spaces calculation form is run.
             if (!validateDetails()) { return; }
             RoomDimensions.setDiameter(crclLengthA);
             RoomDimensions.setHeight(crclHeight);

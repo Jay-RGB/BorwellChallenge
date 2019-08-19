@@ -13,3 +13,7 @@ C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellCh
 C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.csproj.CoreCompileInputs.cache
 C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.exe
 C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.pdb
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\bin\Debug\BorwellChallenge1.exe.manifest
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\bin\Debug\BorwellChallenge1.application
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.exe.manifest
+C:\Users\jamie\Source\Repos\Jay-RGB\BorwellChallenge\BorwellChallenge1\BorwellChallenge1\obj\Debug\BorwellChallenge1.application
