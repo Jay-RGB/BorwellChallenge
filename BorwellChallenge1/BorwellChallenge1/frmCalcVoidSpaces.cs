@@ -35,7 +35,7 @@ namespace BorwellChallenge1
 
         private void TxtHeight_TextChanged(object sender, EventArgs e)
         {
-            decimal newVoidHeight = voidHeight;                         //Prevents users from inputting non-numerical values and displays
+            decimal newVoidHeight = voidHeight;                         //Detects users inputting non-numerical values and displays
                                                                         //an error message for the Users attention.
             if (Decimal.TryParse(txtHeight.Text, out newVoidHeight) == true)
             {
@@ -49,8 +49,8 @@ namespace BorwellChallenge1
 
         private void TxtWidth_TextChanged(object sender, EventArgs e)
         {
-            decimal newVoidWidth = voidWidth;
-
+            decimal newVoidWidth = voidWidth;                           //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtWidth.Text, out newVoidWidth) == true)
             {
                 voidWidth = newVoidWidth;
@@ -61,11 +61,14 @@ namespace BorwellChallenge1
             }
         }
 
-        private bool validateDetails()              //Checks that all fields are populated and displays and error message if they aren't
+        private bool validateDetails()              //Checks that all fields are populated and valid and displays an error message if they aren't
         {
-            if ((string.IsNullOrWhiteSpace(txtHeight.Text)) || (string.IsNullOrWhiteSpace(txtWidth.Text)))
+            decimal newVoidWidth = voidWidth;
+            decimal newVoidHeight = voidHeight;
+
+            if ((string.IsNullOrWhiteSpace(txtHeight.Text)) || (string.IsNullOrWhiteSpace(txtWidth.Text)) || (Decimal.TryParse(txtWidth.Text, out newVoidWidth) == false) || (Decimal.TryParse(txtHeight.Text, out newVoidHeight) == false))
             {
-                MessageBox.Show("Some Fields are blank, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Some Fields are blank or do not contain a valid decimal value, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -75,7 +78,7 @@ namespace BorwellChallenge1
         }
         
 
-        private void BtnSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)        //Submits Void space dimensions to varaiables
         {
             if(!validateDetails()) {return;}
             decimal newVoidSpaceArea = 0;

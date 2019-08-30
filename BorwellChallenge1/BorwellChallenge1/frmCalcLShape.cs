@@ -29,7 +29,7 @@ namespace BorwellChallenge1
 
         private void TxtLengthA_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthA = lLengthA;                              //Prevents users from inputting non-numerical values and displays
+            decimal newLengthA = lLengthA;                              //Detects users inputting non-numerical values and displays
                                                                         //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthA.Text, out newLengthA) == true)
             {
@@ -43,8 +43,8 @@ namespace BorwellChallenge1
 
         private void TxtLengthB_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthB = lLengthB;
-
+            decimal newLengthB = lLengthB;                              //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthB.Text, out newLengthB) == true)
             {
                 lLengthB = newLengthB;
@@ -57,8 +57,8 @@ namespace BorwellChallenge1
 
         private void TxtLengthC_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthC = lLengthC;
-
+            decimal newLengthC = lLengthC;                              //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthC.Text, out newLengthC) == true)
             {
                 lLengthC = newLengthC;
@@ -71,8 +71,8 @@ namespace BorwellChallenge1
 
         private void TxtLengthD_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthD = lLengthD;
-
+            decimal newLengthD = lLengthD;                              //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthD.Text, out newLengthD) == true)
             {
                 lLengthD = newLengthD;
@@ -85,8 +85,8 @@ namespace BorwellChallenge1
 
         private void TxtHeight_TextChanged(object sender, EventArgs e)
         {
-            decimal newHeight = lHeight;
-
+            decimal newHeight = lHeight;                                //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtHeight.Text, out newHeight) == true)
             {
                 lHeight = newHeight;
@@ -97,11 +97,20 @@ namespace BorwellChallenge1
             }
         }
 
-        private bool validateDetails()          //Checks that all fields are populated and displays and error message if they aren't
+        private bool validateDetails()          //Checks that all fields are populated with valid values and displays an error message if they aren't
         {
-            if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtLengthB.Text)) || (string.IsNullOrWhiteSpace(txtLengthC.Text)) || (string.IsNullOrWhiteSpace(txtLengthD.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)))
+            decimal newLengthA = lLengthA;
+            decimal newLengthB = lLengthB;
+            decimal newLengthC = lLengthC;
+            decimal newLengthD = lLengthD;
+            decimal newHeight = lHeight;
+
+            if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtLengthB.Text)) || (string.IsNullOrWhiteSpace(txtLengthC.Text)) || 
+                (string.IsNullOrWhiteSpace(txtLengthD.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)) || (Decimal.TryParse(txtLengthA.Text, out newLengthA) == false) ||
+                (Decimal.TryParse(txtLengthB.Text, out newLengthB) == false) || (Decimal.TryParse(txtLengthC.Text, out newLengthC) == false) || (Decimal.TryParse(txtLengthD.Text, out newLengthD) == false) ||
+                (Decimal.TryParse(txtHeight.Text, out newHeight) == false))
             {
-                MessageBox.Show("Some Fields are blank, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Some Fields are blank or do not contain valid values, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else

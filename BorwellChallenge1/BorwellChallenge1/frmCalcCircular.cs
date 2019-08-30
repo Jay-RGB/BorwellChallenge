@@ -21,7 +21,7 @@ namespace BorwellChallenge1
 
         private void TxtLengthA_TextChanged(object sender, EventArgs e)
         {
-            decimal newLengthA = crclLengthA;                           //Prevents users from inputting non-numerical values and displays
+            decimal newLengthA = crclLengthA;                           //Detects users inputting non-numerical values and displays
                                                                         //an error message for the Users attention.
             if (Decimal.TryParse(txtLengthA.Text, out newLengthA) == true)
             {
@@ -35,8 +35,8 @@ namespace BorwellChallenge1
 
         private void TxtHeight_TextChanged(object sender, EventArgs e)
         {
-            decimal newHeight = crclHeight;
-
+            decimal newHeight = crclHeight;                             //Detects users inputting non-numerical values and displays
+                                                                        //an error message for the Users attention.
             if (Decimal.TryParse(txtHeight.Text, out newHeight) == true)
             {
                 crclHeight = newHeight;
@@ -47,11 +47,15 @@ namespace BorwellChallenge1
             }
         }
 
-        private bool validateDetails()             //Checks that all fields are populated and displays and error message if they aren't
+        private bool validateDetails()             //Checks that all fields are populated with valid values and displays and error message if they aren't
         {
-            if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)))
+            decimal newLengthA = crclLengthA;
+            decimal newHeight = crclHeight;
+
+            if ((string.IsNullOrWhiteSpace(txtLengthA.Text)) || (string.IsNullOrWhiteSpace(txtHeight.Text)) || 
+                (Decimal.TryParse(txtLengthA.Text, out newLengthA) == false) || (Decimal.TryParse(txtHeight.Text, out newHeight) == false))
             {
-                MessageBox.Show("Some Fields are blank, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Some Fields are blank or do not contain a valid decimal value, please fill in all fields and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
